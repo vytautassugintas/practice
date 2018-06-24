@@ -6,14 +6,6 @@ import {
 import environment from '../Environment'
 import LinkList from './LinkList'
 
-const LinkListPageQuery = graphql`
-  query LinkListPageQuery {
-    viewer {
-      ...LinkList_viewer
-    }
-  }
-`
-
 class LinkListPage extends Component {
 
   render() {
@@ -32,7 +24,14 @@ class LinkListPage extends Component {
       />
     )
   }
-
 }
+
+const LinkListPageQuery = graphql`
+  query LinkListPageQuery {
+    viewer {
+      ...LinkList_viewer
+    }
+  }
+`
 
 export default LinkListPage
