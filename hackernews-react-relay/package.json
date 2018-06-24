@@ -17,5 +17,13 @@
   "devDependencies": {
     "babel-plugin-relay": "^1.6.0",
     "relay-compiler": "^1.6.0"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "relay"
+    ]
   }
 }
