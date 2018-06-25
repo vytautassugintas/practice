@@ -13,7 +13,6 @@ class Link extends Component {
       </div>
     )
   }
-
 }
 
 export default createFragmentContainer(Link, graphql`
