@@ -788,6 +788,13 @@ input UserFilter {
   votes_none: VoteFilter
 }
 
+input UserlinksLink {
+  description: String!
+  url: String!
+  votesIds: [ID!]
+  votes: [LinkvotesVote!]
+}
+
 enum UserOrderBy {
   createdAt_ASC
   createdAt_DESC
@@ -797,13 +804,6 @@ enum UserOrderBy {
   name_DESC
   updatedAt_ASC
   updatedAt_DESC
-}
-
-input UserlinksLink {
-  description: String!
-  url: String!
-  votesIds: [ID!]
-  votes: [LinkvotesVote!]
 }
 
 input UservotesVote {
@@ -949,15 +949,6 @@ input VoteFilter {
   user: UserFilter
 }
 
-enum VoteOrderBy {
-  createdAt_ASC
-  createdAt_DESC
-  id_ASC
-  id_DESC
-  updatedAt_ASC
-  updatedAt_DESC
-}
-
 input VotelinkLink {
   description: String!
   url: String!
@@ -967,6 +958,15 @@ input VotelinkLink {
   votes: [LinkvotesVote!]
 }
 
+enum VoteOrderBy {
+  createdAt_ASC
+  createdAt_DESC
+  id_ASC
+  id_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
 input VoteuserUser {
   name: String!
   linksIds: [ID!]
@@ -974,4 +974,3 @@ input VoteuserUser {
   votesIds: [ID!]
   votes: [UservotesVote!]
 }
-
